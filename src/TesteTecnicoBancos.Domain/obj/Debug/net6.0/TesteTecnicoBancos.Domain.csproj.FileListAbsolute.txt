@@ -16,6 +16,7 @@ D:\Dev\workspace\TesteTecnicoBancos\src\TesteTecnicoBancos.Domain\obj\Debug\net6
 D:\Dev\workspace\TesteTecnicoBancos\src\TesteTecnicoBancos.Domain\obj\Debug\net6.0\TesteTecnicoBancos.Domain.AssemblyInfoInputs.cache
 D:\Dev\workspace\TesteTecnicoBancos\src\TesteTecnicoBancos.Domain\obj\Debug\net6.0\TesteTecnicoBancos.Domain.AssemblyInfo.cs
 D:\Dev\workspace\TesteTecnicoBancos\src\TesteTecnicoBancos.Domain\obj\Debug\net6.0\TesteTecnicoBancos.Domain.csproj.CoreCompileInputs.cache
+D:\Dev\workspace\TesteTecnicoBancos\src\TesteTecnicoBancos.Domain\obj\Debug\net6.0\TesteTecnicoBancos.Domain.sourcelink.json
 D:\Dev\workspace\TesteTecnicoBancos\src\TesteTecnicoBancos.Domain\obj\Debug\net6.0\TesteTecnicoBancos.Domain.dll
 D:\Dev\workspace\TesteTecnicoBancos\src\TesteTecnicoBancos.Domain\obj\Debug\net6.0\refint\TesteTecnicoBancos.Domain.dll
 D:\Dev\workspace\TesteTecnicoBancos\src\TesteTecnicoBancos.Domain\obj\Debug\net6.0\TesteTecnicoBancos.Domain.pdb

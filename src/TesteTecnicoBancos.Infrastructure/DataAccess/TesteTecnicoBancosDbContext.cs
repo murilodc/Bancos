@@ -5,6 +5,7 @@ namespace TesteTecnicoBancos.Infrastructure.DataAccess;
 internal class TesteTecnicoBancosDbContext : DbContext
 {
     public TesteTecnicoBancosDbContext(DbContextOptions options) : base(options) { }
-    public DbSet<Bank>? Banks { get; set; }
+    public DbSet<Bank> Banks { get; set; }
     public DbSet<Boleto>? Boletos { get; set; }
+    
 }

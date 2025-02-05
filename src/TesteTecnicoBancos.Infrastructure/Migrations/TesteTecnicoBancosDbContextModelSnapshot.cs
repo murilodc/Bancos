@@ -55,18 +55,26 @@ namespace TesteTecnicoBancos.Infrastructure.Migrations
                     b.Property<long>("BankId")
                         .HasColumnType("bigint");
 
-                    b.Property<string>("CPFCNPJ")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<DateOnly>("DueDate")
-                        .HasColumnType("date");
+                    b.Property<DateTime>("DueDate")
+                        .HasColumnType("timestamp with time zone");
 
                     b.Property<string>("Obs")
                         .IsRequired()
                         .HasColumnType("text");
 
+                    b.Property<string>("PayeeCpfCnpj")
+                        .IsRequired()
+                        .HasColumnType("text");
+
                     b.Property<string>("PayeeName")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("RecipientCpfCnpj")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("RecipientName")
                         .IsRequired()
                         .HasColumnType("text");
 

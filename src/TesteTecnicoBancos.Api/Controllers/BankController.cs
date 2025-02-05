@@ -1,4 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
+using TesteTecnicoBancos.Application.UseCases.Banks.Get;
+using TesteTecnicoBancos.Application.UseCases.Banks.Register;
+using TesteTecnicoBancos.Communication.Requests;
 
 namespace TesteTecnicoBancos.Controllers;
 
@@ -6,18 +9,34 @@ namespace TesteTecnicoBancos.Controllers;
 [ApiController]
 public class BankController : ControllerBase
 {
+    [HttpPost]
+    public async Task<IActionResult> Register(
+        [FromServices] IRegisterBankUsecase useCase,
+        [FromBody] RequestRegisterBankJson request)
+    {
+        var response = await useCase.Execute(request);
+        return Created(string.Empty, response);
+    }
 
     [HttpGet]
-    public async Task<IActionResult> GetAllBanks()
-    {
+    public async Task<IActionResult> GetAllBanks([FromServices] IGetAllBanksUseCase useCase) {
+        var response = await useCase.Execute();
+
+        if(response.Banks.Count != 0)
+        {
+            return Ok(response);
+        }
         return NoContent();
     }
 
     [HttpGet]
-    [Route("{id}")]
-    public async Task<IActionResult> GetById(
-        [FromRoute] long id)
+    [Route("{code}")]
+    public async Task<IActionResult> GetByCode(
+        [FromServices] IGetBankByCodeUsecase useCase,
+        [FromRoute] int code)
     {
-        return NoContent();
+        var response = await useCase.Execute(code);
+
+        return Ok(response);
     }
 }

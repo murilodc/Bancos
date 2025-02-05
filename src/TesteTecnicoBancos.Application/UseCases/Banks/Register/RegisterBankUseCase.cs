@@ -6,7 +6,7 @@ using TesteTecnicoBancos.Domain.Repositories;
 using TesteTecnicoBancos.Domain.Repositories.Banks;
 
 namespace TesteTecnicoBancos.Application.UseCases.Banks.Register;
-public class RegisterBankUseCase
+public class RegisterBankUseCase : IRegisterBankUsecase
 {
     private readonly IMapper _mapper;
     private readonly IBanksWriteOnlyRepository _repository;

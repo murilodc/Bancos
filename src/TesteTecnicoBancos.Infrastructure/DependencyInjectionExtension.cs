@@ -5,6 +5,7 @@ using TesteTecnicoBancos.Infrastructure.DataAccess;
 using TesteTecnicoBancos.Domain.Repositories;
 using TesteTecnicoBancos.Domain.Repositories.Banks;
 using TesteTecnicoBancos.Infrastructure.DataAccess.Repositories;
+using TesteTecnicoBancos.Domain.Repositories.Boletos;
 
 namespace TesteTecnicoBancos.Infrastructure;
 public static class DependencyInjectionExtension
@@ -19,6 +20,9 @@ public static class DependencyInjectionExtension
     {
         services.AddScoped<IUnitOfWork, UnitOfWork>();
         services.AddScoped<IBanksWriteOnlyRepository, BanksRepository>();
+        services.AddScoped<IBanksReadOnlyRepository, BanksRepository>();
+        services.AddScoped<IBoletosWriteOnlyRepository, BoletosRepository>();
+        services.AddScoped<IBoletosReadOnlyRepository, BoletosRepository>();
     }
     private static void AddDbContext(IServiceCollection services, IConfiguration configuration)
     {

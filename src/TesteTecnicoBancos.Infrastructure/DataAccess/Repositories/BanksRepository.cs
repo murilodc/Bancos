@@ -3,7 +3,7 @@ using TesteTecnicoBancos.Domain.Entities;
 using TesteTecnicoBancos.Domain.Repositories.Banks;
 
 namespace TesteTecnicoBancos.Infrastructure.DataAccess.Repositories;
-internal class BanksRepository : IBanksWriteOnlyRepository
+internal class BanksRepository : IBanksWriteOnlyRepository, IBanksReadOnlyRepository
 {
     private readonly TesteTecnicoBancosDbContext _dbContext;
     public BanksRepository(TesteTecnicoBancosDbContext dbContext)
@@ -16,15 +16,12 @@ internal class BanksRepository : IBanksWriteOnlyRepository
         await _dbContext.AddAsync(bank);
     }
 
-    public async Task<bool> Delete(long id)
+    public async Task<List<Bank>> GetAll()
     {
-        var result = await _dbContext.Banks.FirstOrDefaultAsync(expense => expense.Id == id);
-        if (result is null)
-        {
-            return false;
-        }
-
-        _dbContext.Banks.Remove(result);
-        return true;
+        return await _dbContext.Banks.AsNoTracking().ToListAsync();
+    }
+    public async Task<Bank?> GetByCode(int code)
+    {
+        return await _dbContext.Banks.FirstOrDefaultAsync(bank =>  bank.Code == code);
     }
 }
