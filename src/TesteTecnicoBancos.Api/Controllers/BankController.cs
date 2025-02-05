@@ -1,7 +1,9 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using TesteTecnicoBancos.Application.UseCases.Banks.Get;
 using TesteTecnicoBancos.Application.UseCases.Banks.Register;
 using TesteTecnicoBancos.Communication.Requests;
+using TesteTecnicoBancos.Communication.Responses;
 using static TesteTecnicoBancos.Application.UseCases.Banks.Get.GetBankByCodeUseCase;
 
 namespace TesteTecnicoBancos.Controllers;
@@ -11,6 +13,9 @@ namespace TesteTecnicoBancos.Controllers;
 public class BankController : ControllerBase
 {
     [HttpPost]
+    [Authorize]
+    [ProducesResponseType(typeof(ResponseRegisteredBankJson),StatusCodes.Status201Created)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
     public async Task<IActionResult> Register(
         [FromServices] IRegisterBankUsecase useCase,
         [FromBody] RequestRegisterBankJson request)
@@ -20,6 +25,9 @@ public class BankController : ControllerBase
     }
 
     [HttpGet]
+    [Authorize]
+    [ProducesResponseType(typeof(ResponseBoletoJson),StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status204NoContent)]
     public async Task<IActionResult> GetAllBanks([FromServices] IGetAllBanksUseCase useCase) {
         var response = await useCase.Execute();
 
@@ -31,19 +39,15 @@ public class BankController : ControllerBase
     }
 
     [HttpGet]
+    [Authorize]
     [Route("{code}")]
+    [ProducesResponseType(typeof(ResponseBoletoJson),StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status204NoContent)]
     public async Task<IActionResult> GetByCode(
         [FromServices] IGetBankByCodeUsecase useCase,
         [FromRoute] int code)
     {
-        try
-        {
-            var response = await useCase.Execute(code);
-            return Ok(response);
-        }
-        catch (BankNotFoundException)
-        {
-            return NotFound("Banco não encontrado");
-        }
+        var response = await useCase.Execute(code);
+        return Ok(response);
     }
 }

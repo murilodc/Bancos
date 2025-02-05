@@ -1,8 +1,10 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using TesteTecnicoBancos.Application.UseCases.Banks.Get;
 using TesteTecnicoBancos.Application.UseCases.Boletos.Get;
 using TesteTecnicoBancos.Application.UseCases.Boletos.Register;
 using TesteTecnicoBancos.Communication.Requests;
+using TesteTecnicoBancos.Communication.Responses;
 using static TesteTecnicoBancos.Application.UseCases.Boletos.Get.GetBoletoByIdUsecase;
 
 namespace TesteTecnicoBancos.Api.Controllers;
@@ -12,6 +14,9 @@ namespace TesteTecnicoBancos.Api.Controllers;
 public class BoletoController : ControllerBase
 {
     [HttpPost]
+    [Authorize]
+    [ProducesResponseType(typeof(ResponseRegisteredBoletoJson),StatusCodes.Status201Created)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
     public async Task<IActionResult> Register(
         [FromServices] IRegisterBoletoUsecase useCase,
         [FromBody] RequestRegisterBoletoJson request)
@@ -22,18 +27,14 @@ public class BoletoController : ControllerBase
 
     [HttpGet]
     [Route("{id}")]
+    [Authorize]
+    [ProducesResponseType(typeof(ResponseBoletoJson),StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status204NoContent)]
     public async Task<IActionResult> GetById(
         [FromServices] IGetBoletoByIdUseCase useCase,
         [FromRoute] long id)
     {
-        try
-        {
-            var response = await useCase.Execute(id);
-            return Ok(response);
-        }
-        catch (BankNotFoundException)
-        {
-            return NotFound("Boleto não encontrado");
-        }
+        var response = await useCase.Execute(id);
+        return Ok(response);
     }
 }

@@ -21,32 +21,27 @@ public class GetBoletoByIdUsecase : IGetBoletoByIdUseCase
     public async Task<ResponseBoletoJson> Execute(long id)
     {
         var result = await _repository.GetById(id);
-        if(result == null)
+        if(result != null)
         {
-            throw new BankNotFoundException("Banco não encontrado.");
+            result.Value = await CalculateFinalValue(result);
         }
-        result.Value = await CalculateFinalValue(result);
+
         return _mapper.Map<ResponseBoletoJson>(result);
     }
     private async Task<decimal> CalculateFinalValue(Boleto boleto)
     {
         var bank = await _bankrepository.GetByBankId(boleto.BankId);
-        if(bank == null)
+        if(bank != null)
         {
-            throw new KeyNotFoundException("Banco não encontrado.");
-        }
-        DateTime today = DateTime.Today;
-        if(today > boleto.DueDate)
-        {
-            int days = (today - boleto.DueDate).Days;
-            decimal interest = boleto.Value * (bank.Interest / 100) * days;
-            return boleto.Value + interest;
+            DateTime today = DateTime.Today;
+            if (today > boleto.DueDate)
+            {
+                int days = (today - boleto.DueDate).Days;
+                decimal interest = boleto.Value * (bank.Interest / 100) * days;
+                return boleto.Value + interest;
+            }
         }
         return boleto.Value;
-    }
-    public class BankNotFoundException : Exception
-    {
-        public BankNotFoundException(string message) : base(message) { }
     }
 
 }

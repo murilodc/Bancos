@@ -16,14 +16,7 @@ public class GetBankByCodeUseCase : IGetBankByCodeUsecase
     public async Task<ResponseBankJson> Execute(int code)
     {
         var result = await _repository.GetByCode(code);
-        if(result == null)
-        {
-            throw new BankNotFoundException("Banco não encontrado.");
-        }
+
         return _mapper.Map<ResponseBankJson>(result);
-    }
-    public class BankNotFoundException : Exception
-    {
-        public BankNotFoundException(string message) : base(message) { }
     }
 }
