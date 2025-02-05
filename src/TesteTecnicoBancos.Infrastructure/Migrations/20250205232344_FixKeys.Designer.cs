@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using TesteTecnicoBancos.Infrastructure.DataAccess;
@@ -11,9 +12,10 @@ using TesteTecnicoBancos.Infrastructure.DataAccess;
 namespace TesteTecnicoBancos.Infrastructure.Migrations
 {
     [DbContext(typeof(TesteTecnicoBancosDbContext))]
-    partial class TesteTecnicoBancosDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250205232344_FixKeys")]
+    partial class FixKeys
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
