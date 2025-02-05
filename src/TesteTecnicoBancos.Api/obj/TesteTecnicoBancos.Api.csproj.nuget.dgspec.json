@@ -1,0 +1,364 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\Dev\\workspace\\TesteTecnicoBancos\\src\\TesteTecnicoBancos.Api\\TesteTecnicoBancos.Api.csproj": {}
+  },
+  "projects": {
+    "D:\\Dev\\workspace\\TesteTecnicoBancos\\src\\TesteTecnicoBancos.Api\\TesteTecnicoBancos.Api.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Dev\\workspace\\TesteTecnicoBancos\\src\\TesteTecnicoBancos.Api\\TesteTecnicoBancos.Api.csproj",
+        "projectName": "TesteTecnicoBancos.Api",
+        "projectPath": "D:\\Dev\\workspace\\TesteTecnicoBancos\\src\\TesteTecnicoBancos.Api\\TesteTecnicoBancos.Api.csproj",
+        "packagesPath": "C:\\Users\\cw_58\\.nuget\\packages\\",
+        "outputPath": "D:\\Dev\\workspace\\TesteTecnicoBancos\\src\\TesteTecnicoBancos.Api\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\cw_58\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "D:\\Dev\\workspace\\TesteTecnicoBancos\\src\\TesteTecnicoBancos.Application\\TesteTecnicoBancos.Application.csproj": {
+                "projectPath": "D:\\Dev\\workspace\\TesteTecnicoBancos\\src\\TesteTecnicoBancos.Application\\TesteTecnicoBancos.Application.csproj"
+              },
+              "D:\\Dev\\workspace\\TesteTecnicoBancos\\src\\TesteTecnicoBancos.Communication\\TesteTecnicoBancos.Communication.csproj": {
+                "projectPath": "D:\\Dev\\workspace\\TesteTecnicoBancos\\src\\TesteTecnicoBancos.Communication\\TesteTecnicoBancos.Communication.csproj"
+              },
+              "D:\\Dev\\workspace\\TesteTecnicoBancos\\src\\TesteTecnicoBancos.Infrastructure\\TesteTecnicoBancos.Infrastructure.csproj": {
+                "projectPath": "D:\\Dev\\workspace\\TesteTecnicoBancos\\src\\TesteTecnicoBancos.Infrastructure\\TesteTecnicoBancos.Infrastructure.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.36, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.5.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Dev\\workspace\\TesteTecnicoBancos\\src\\TesteTecnicoBancos.Application\\TesteTecnicoBancos.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Dev\\workspace\\TesteTecnicoBancos\\src\\TesteTecnicoBancos.Application\\TesteTecnicoBancos.Application.csproj",
+        "projectName": "TesteTecnicoBancos.Application",
+        "projectPath": "D:\\Dev\\workspace\\TesteTecnicoBancos\\src\\TesteTecnicoBancos.Application\\TesteTecnicoBancos.Application.csproj",
+        "packagesPath": "C:\\Users\\cw_58\\.nuget\\packages\\",
+        "outputPath": "D:\\Dev\\workspace\\TesteTecnicoBancos\\src\\TesteTecnicoBancos.Application\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\cw_58\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "D:\\Dev\\workspace\\TesteTecnicoBancos\\src\\TesteTecnicoBancos.Communication\\TesteTecnicoBancos.Communication.csproj": {
+                "projectPath": "D:\\Dev\\workspace\\TesteTecnicoBancos\\src\\TesteTecnicoBancos.Communication\\TesteTecnicoBancos.Communication.csproj"
+              },
+              "D:\\Dev\\workspace\\TesteTecnicoBancos\\src\\TesteTecnicoBancos.Domain\\TesteTecnicoBancos.Domain.csproj": {
+                "projectPath": "D:\\Dev\\workspace\\TesteTecnicoBancos\\src\\TesteTecnicoBancos.Domain\\TesteTecnicoBancos.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Dev\\workspace\\TesteTecnicoBancos\\src\\TesteTecnicoBancos.Communication\\TesteTecnicoBancos.Communication.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Dev\\workspace\\TesteTecnicoBancos\\src\\TesteTecnicoBancos.Communication\\TesteTecnicoBancos.Communication.csproj",
+        "projectName": "TesteTecnicoBancos.Communication",
+        "projectPath": "D:\\Dev\\workspace\\TesteTecnicoBancos\\src\\TesteTecnicoBancos.Communication\\TesteTecnicoBancos.Communication.csproj",
+        "packagesPath": "C:\\Users\\cw_58\\.nuget\\packages\\",
+        "outputPath": "D:\\Dev\\workspace\\TesteTecnicoBancos\\src\\TesteTecnicoBancos.Communication\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\cw_58\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Dev\\workspace\\TesteTecnicoBancos\\src\\TesteTecnicoBancos.Domain\\TesteTecnicoBancos.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Dev\\workspace\\TesteTecnicoBancos\\src\\TesteTecnicoBancos.Domain\\TesteTecnicoBancos.Domain.csproj",
+        "projectName": "TesteTecnicoBancos.Domain",
+        "projectPath": "D:\\Dev\\workspace\\TesteTecnicoBancos\\src\\TesteTecnicoBancos.Domain\\TesteTecnicoBancos.Domain.csproj",
+        "packagesPath": "C:\\Users\\cw_58\\.nuget\\packages\\",
+        "outputPath": "D:\\Dev\\workspace\\TesteTecnicoBancos\\src\\TesteTecnicoBancos.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\cw_58\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Dev\\workspace\\TesteTecnicoBancos\\src\\TesteTecnicoBancos.Infrastructure\\TesteTecnicoBancos.Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Dev\\workspace\\TesteTecnicoBancos\\src\\TesteTecnicoBancos.Infrastructure\\TesteTecnicoBancos.Infrastructure.csproj",
+        "projectName": "TesteTecnicoBancos.Infrastructure",
+        "projectPath": "D:\\Dev\\workspace\\TesteTecnicoBancos\\src\\TesteTecnicoBancos.Infrastructure\\TesteTecnicoBancos.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\cw_58\\.nuget\\packages\\",
+        "outputPath": "D:\\Dev\\workspace\\TesteTecnicoBancos\\src\\TesteTecnicoBancos.Infrastructure\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\cw_58\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "D:\\Dev\\workspace\\TesteTecnicoBancos\\src\\TesteTecnicoBancos.Domain\\TesteTecnicoBancos.Domain.csproj": {
+                "projectPath": "D:\\Dev\\workspace\\TesteTecnicoBancos\\src\\TesteTecnicoBancos.Domain\\TesteTecnicoBancos.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.36, )"
+            },
+            "Microsoft.Extensions.Configuration.Abstractions": {
+              "target": "Package",
+              "version": "[9.0.1, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[6.0.29, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

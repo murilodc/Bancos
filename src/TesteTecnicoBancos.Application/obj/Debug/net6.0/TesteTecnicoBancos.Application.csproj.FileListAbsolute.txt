@@ -1,0 +1,17 @@
+D:\Dev\workspace\TesteTecnicoBancos\src\TesteTecnicoBancos.Application\bin\Debug\net6.0\TesteTecnicoBancos.Application.deps.json
+D:\Dev\workspace\TesteTecnicoBancos\src\TesteTecnicoBancos.Application\bin\Debug\net6.0\TesteTecnicoBancos.Application.dll
+D:\Dev\workspace\TesteTecnicoBancos\src\TesteTecnicoBancos.Application\bin\Debug\net6.0\TesteTecnicoBancos.Application.pdb
+D:\Dev\workspace\TesteTecnicoBancos\src\TesteTecnicoBancos.Application\bin\Debug\net6.0\TesteTecnicoBancos.Communication.dll
+D:\Dev\workspace\TesteTecnicoBancos\src\TesteTecnicoBancos.Application\bin\Debug\net6.0\TesteTecnicoBancos.Domain.dll
+D:\Dev\workspace\TesteTecnicoBancos\src\TesteTecnicoBancos.Application\bin\Debug\net6.0\TesteTecnicoBancos.Communication.pdb
+D:\Dev\workspace\TesteTecnicoBancos\src\TesteTecnicoBancos.Application\bin\Debug\net6.0\TesteTecnicoBancos.Domain.pdb
+D:\Dev\workspace\TesteTecnicoBancos\src\TesteTecnicoBancos.Application\obj\Debug\net6.0\TesteTecnicoBancos.Application.csproj.AssemblyReference.cache
+D:\Dev\workspace\TesteTecnicoBancos\src\TesteTecnicoBancos.Application\obj\Debug\net6.0\TesteTecnicoBancos.Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\Dev\workspace\TesteTecnicoBancos\src\TesteTecnicoBancos.Application\obj\Debug\net6.0\TesteTecnicoBancos.Application.AssemblyInfoInputs.cache
+D:\Dev\workspace\TesteTecnicoBancos\src\TesteTecnicoBancos.Application\obj\Debug\net6.0\TesteTecnicoBancos.Application.AssemblyInfo.cs
+D:\Dev\workspace\TesteTecnicoBancos\src\TesteTecnicoBancos.Application\obj\Debug\net6.0\TesteTecnicoBancos.Application.csproj.CoreCompileInputs.cache
+D:\Dev\workspace\TesteTecnicoBancos\src\TesteTecnicoBancos.Application\obj\Debug\net6.0\TesteTecnicoBancos.Application.csproj.CopyComplete
+D:\Dev\workspace\TesteTecnicoBancos\src\TesteTecnicoBancos.Application\obj\Debug\net6.0\TesteTecnicoBancos.Application.dll
+D:\Dev\workspace\TesteTecnicoBancos\src\TesteTecnicoBancos.Application\obj\Debug\net6.0\refint\TesteTecnicoBancos.Application.dll
+D:\Dev\workspace\TesteTecnicoBancos\src\TesteTecnicoBancos.Application\obj\Debug\net6.0\TesteTecnicoBancos.Application.pdb
+D:\Dev\workspace\TesteTecnicoBancos\src\TesteTecnicoBancos.Application\obj\Debug\net6.0\ref\TesteTecnicoBancos.Application.dll
