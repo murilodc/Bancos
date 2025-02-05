@@ -5,4 +5,5 @@ public interface IBanksReadOnlyRepository
 {
     Task<List<Bank>> GetAll();
     Task<Bank?> GetByCode(int code);
+    Task<Bank?> GetByBankId(long bankId);
 }

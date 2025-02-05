@@ -3,6 +3,7 @@ using TesteTecnicoBancos.Application.UseCases.Banks.Get;
 using TesteTecnicoBancos.Application.UseCases.Boletos.Get;
 using TesteTecnicoBancos.Application.UseCases.Boletos.Register;
 using TesteTecnicoBancos.Communication.Requests;
+using static TesteTecnicoBancos.Application.UseCases.Boletos.Get.GetBoletoByIdUsecase;
 
 namespace TesteTecnicoBancos.Api.Controllers;
 
@@ -25,7 +26,14 @@ public class BoletoController : ControllerBase
         [FromServices] IGetBoletoByIdUseCase useCase,
         [FromRoute] long id)
     {
-        var response = await useCase.Execute(id);
-        return Ok(response);
+        try
+        {
+            var response = await useCase.Execute(id);
+            return Ok(response);
+        }
+        catch (BankNotFoundException)
+        {
+            return NotFound("Boleto não encontrado");
+        }
     }
 }

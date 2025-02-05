@@ -20,6 +20,12 @@ internal class BanksRepository : IBanksWriteOnlyRepository, IBanksReadOnlyReposi
     {
         return await _dbContext.Banks.AsNoTracking().ToListAsync();
     }
+
+    public async Task<Bank?> GetByBankId(long bankId)
+    {
+        return await _dbContext.Banks.FirstOrDefaultAsync(bank => bank.Id == bankId);
+    }
+
     public async Task<Bank?> GetByCode(int code)
     {
         return await _dbContext.Banks.FirstOrDefaultAsync(bank =>  bank.Code == code);

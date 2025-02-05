@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using TesteTecnicoBancos.Application.UseCases.Banks.Get;
 using TesteTecnicoBancos.Application.UseCases.Banks.Register;
 using TesteTecnicoBancos.Communication.Requests;
+using static TesteTecnicoBancos.Application.UseCases.Banks.Get.GetBankByCodeUseCase;
 
 namespace TesteTecnicoBancos.Controllers;
 
@@ -35,8 +36,14 @@ public class BankController : ControllerBase
         [FromServices] IGetBankByCodeUsecase useCase,
         [FromRoute] int code)
     {
-        var response = await useCase.Execute(code);
-
-        return Ok(response);
+        try
+        {
+            var response = await useCase.Execute(code);
+            return Ok(response);
+        }
+        catch (BankNotFoundException)
+        {
+            return NotFound("Banco não encontrado");
+        }
     }
 }
